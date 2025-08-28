@@ -1,0 +1,195 @@
+/* --- CONFIGURAÇÕES GLOBAIS --- */
+:root {
+    --color-background: #121212;
+    --color-surface: #1e1e1e;
+    --color-text: #ffffff;
+    --color-primary: #e50914;
+    --font-headings: 'Montserrat', sans-serif;
+    --font-paragraphs: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-paragraphs);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-headings);
+}
+
+h1 { font-size: 44px; }
+h2 { font-size: 30px; margin-bottom: 20px; }
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.button-primary {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+
+.button-primary:hover {
+    transform: scale(1.05);
+}
+
+
+/* --- CABEÇALHO --- */
+.main-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-headings);
+    font-size: 24px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* --- PÁGINA HOME --- */
+.hero-section {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero-section h1 {
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.services-overview {
+    background-color: var(--color-surface);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.service-item {
+    padding: 20px;
+}
+
+.service-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+
+/* --- CABEÇALHO DE PÁGINA INTERNA --- */
+.page-header {
+    background-color: var(--color-surface);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* --- RODAPÉ --- */
+.main-footer {
+    background-color: #000;
+    padding-top: 50px;
+    font-size: 15px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.footer-column a, .footer-column p {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding: 20px 0;
+    color: #888;
+}
+
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-surface);
+        position: absolute;
+        top: 75px; /* Altura do header */
+        left: 0;
+        z-index: 10;
+    }
+    
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a {
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #333;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
