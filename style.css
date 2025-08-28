@@ -193,3 +193,9 @@ section {
         display: block;
     }
 }
+/* --- ESTILOS DO LOGOTIPO NO CABEÇALHO --- */
+.header-logo {
+    max-height: 50px; /* Você pode ajustar este valor para aumentar ou diminuir a logo */
+    width: auto;      /* Mantém a proporção da imagem */
+    display: block;   /* Ajuda a remover espaços extras abaixo da imagem */
+}
